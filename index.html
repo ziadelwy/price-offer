@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض سعر - CallVa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+        </header>
+
+        <!-- Main Title -->
+        <h1 class="main-title">عرض سعر</h1>
+
+        <!-- Customer Information Section -->
+        <div class="customer-info">
+            <h2>معلومات العميل والخدمة</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>اسم العميل:</label>
+                    <input type="text" id="clientName" placeholder="أدخل اسم العميل" value="">
+                </div>
+                <div class="info-item">
+                    <label>التاريخ:</label>
+                    <input type="text" id="currentDate" readonly>
+                </div>
+                <div class="info-item">
+                    <label>صالح حتى:</label>
+                    <input type="text" id="validUntil" readonly>
+                </div>
+                <div class="info-item">
+                    <label>عدد أيام الخدمة أسبوعياً:</label>
+                    <input type="number" id="daysPerWeek" value="6" min="1" max="7">
+                </div>
+                <div class="info-item">
+                    <label>عدد ساعات الخدمة يومياً:</label>
+                    <input type="number" id="hoursPerDay" value="8" min="1" max="24">
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Tables -->
+        <div class="pricing-section">
+            <div class="table-header">
+                <h2>جدول التكاليف</h2>
+                <button id="addTableBtn" class="btn btn-secondary">إضافة جدول جديد</button>
+            </div>
+            
+            <div id="tablesContainer">
+                <div class="table-wrapper" data-table-id="1">
+                    <div class="table-controls">
+                        <span class="table-title">جدول التكلفة #1</span>
+                        <button class="remove-table-btn" onclick="removeTable(1)">حذف الجدول</button>
+                    </div>
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>البند</th>
+                                <th>العدد</th>
+                                <th>عدد الأشهر</th>
+                                <th>التكلفة الإجمالية</th>
+                                <th>الإجمالي</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ممثل خدمة العملاء</td>
+                                <td><input type="number" class="quantity-input" value="1" min="1"></td>
+                                <td><input type="number" class="months-input" value="1" min="1"></td>
+                                <td><input type="number" class="cost-input" value="2500" min="0"></td>
+                                <td class="total item-total">2,500</td>
+                            </tr>
+                            <tr>
+                                <td>مركز الاتصال السحابي</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>مجاني</td>
+                                <td class="total">0</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="subtotal">
+                                <td colspan="4">إجمالي المبلغ</td>
+                                <td class="total table-subtotal">2,500</td>
+                            </tr>
+                            <tr class="discount">
+                                <td colspan="4">الإجمالي بعد الخصم</td>
+                                <td class="total table-discounted">2,500</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Setup Fee -->
+        <div class="setup-fee">
+            <p>مصاريف إنشاء الخدمة تدفع لمرة واحدة فقط بقيمة <span id="setupFee">500</span> ريال.</p>
+            <p>سعر الدقيقة 30 هللة</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions">
+            <button id="calculateBtn" class="btn btn-primary">حساب التكلفة</button>
+            <button id="printBtn" class="btn btn-secondary">طباعة</button>
+            <button id="exportBtn" class="btn btn-secondary">تصدير PDF</button>
+            <button id="resetBtn" class="btn btn-secondary">إعادة تعيين</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
