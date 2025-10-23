@@ -17,7 +17,7 @@ html {
 html, body {
     font-family: 'Cairo', Arial, sans-serif;
     background-image: url('back.jpg');
-    background-size: 50% 100%;
+    background-size: 100% 100%;
     background-position: left;
     background-repeat: no-repeat;
     background-attachment: fixed;
