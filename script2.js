@@ -58,12 +58,6 @@ class PriceCalculator {
         }
     }
 
-    syncAllMonths(sourceTable, sourceMonths) {
-        const months = parseInt(sourceMonths) || 1;
-        this.syncWithinTable(sourceTable, months, 'months');
-        this.calculateTable(sourceTable);
-    }
-
     syncAllQuantities(sourceTable, sourceQuantity) {
         const quantity = parseInt(sourceQuantity) || 1;
         this.syncWithinTable(sourceTable, quantity, 'quantity');
@@ -99,16 +93,19 @@ class PriceCalculator {
         const crmMonthsInputs = table.querySelectorAll('.crm-months-input');
         const crmCostInputs = table.querySelectorAll('.crm-cost-input');
 
+        // ربط الأحداث لحساب الجدول عند تغيير التكلفة
         [...costInputs, ...crmCostInputs].forEach(input => {
             input.addEventListener('input', () => this.calculateTable(table));
         });
 
+        // ربط الأحداث لحساب الجدول عند تغيير عدد الأشهر (بدون مزامنة)
         [...monthsInputs, ...crmMonthsInputs].forEach(input => {
             input.addEventListener('input', () => {
-                this.syncAllMonths(table, input.value);
+                this.calculateTable(table);
             });
         });
 
+        // ربط الأحداث لمزامنة الكمية وحساب الجدول عند تغيير العدد
         quantityInputs.forEach(input => {
             input.addEventListener('input', () => {
                 this.syncAllQuantities(table, input.value);
@@ -291,7 +288,6 @@ class PriceCalculator {
         crmMonthsInputs.forEach(input => input.value = 1);
         crmCostInputs.forEach(input => input.value = 50);
 
-        this.syncWithinTable(table, 1, 'months');
         this.syncWithinTable(table, 1, 'quantity');
         this.calculateTable(table);
     }
