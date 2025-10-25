@@ -326,26 +326,4 @@ document.addEventListener('DOMContentLoaded', function() {
             calculator.addNewTable();
         }
     });
-
-    setInterval(() => {
-        const data = {
-            clientName: calculator.clientName.value,
-            currentDate: calculator.currentDate.value,
-            validUntil: calculator.validUntil.value,
-        };
-        localStorage.setItem('priceQuoteData', JSON.stringify(data));
-    }, 30000);
-
-    const savedData = localStorage.getItem('priceQuoteData');
-    if (savedData) {
-        try {
-            const data = JSON.parse(savedData);
-            if (data.clientName) calculator.clientName.value = data.clientName;
-            if (data.currentDate) calculator.currentDate.value = data.currentDate;
-            if (data.validUntil) calculator.validUntil.value = data.validUntil;
-            calculator.calculateAll();
-        } catch (e) {
-            console.log('Error parsing saved data:', e);
-        }
-    }
 });
