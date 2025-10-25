@@ -1,0 +1,692 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-image: url('back.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+html, body {
+    font-family: 'Cairo', Arial, sans-serif;
+    background-image: url('back.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.4;
+    direction: rtl;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin: 20px auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Header Styles */
+.header {
+    display: none;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.contact-info {
+    text-align: left;
+    color: #6f42c1;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.website {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #6f42c1;
+}
+
+.email {
+    font-size: 15px;
+    font-weight: 500;
+    color: #8e44ad;
+}
+
+/* Main Title */
+.main-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+}
+
+/* Customer Information */
+.customer-info {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-right: 4px solid #2c3e50;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-info h2 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 12px;
+}
+
+.info-item input {
+    padding: 10px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: white;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-item input:focus {
+    outline: none;
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+    transform: translateY(-2px);
+}
+
+.info-item input[readonly] {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #dee2e6;
+}
+
+/* Pricing Section */
+.pricing-section {
+    margin-bottom: 30px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.table-header h2 {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.table-wrapper {
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-title {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 12px;
+}
+
+.remove-table-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: all 0.2s ease;
+}
+
+.remove-table-btn:hover {
+    background: #c82333;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background-color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table th {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 18px 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-table td {
+    padding: 15px 12px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+/* تحديد ألوان الصفوف بتباين واضح */
+.pricing-table tbody tr:nth-child(odd) {
+    background-color: #f0f4f8; /* أزرق فاتح جدًا */
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background-color: #e8ecef; /* رمادي فاتح */
+}
+
+.pricing-table tbody tr:hover {
+    background-color: #d1e7dd; /* أخضر فاتح عند التمرير */
+}
+
+.pricing-table tbody tr:hover td {
+    background-color: #d1e7dd;
+}
+
+.pricing-table input {
+    width: 90px;
+    padding: 8px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.pricing-table input:focus {
+    outline: none;
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.total {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 14px;
+    background-color: #f8f9fa;
+}
+
+.subtotal {
+    background: linear-gradient(135deg, #e8f5e8, #d4edda) !important;
+    font-weight: 700;
+    font-size: 14px;
+    color: #155724;
+    border-top: 2px solid #28a745;
+}
+
+.discounted-total {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7) !important;
+    font-weight: 700;
+    font-size: 14px;
+    color: #856404;
+}
+
+/* Setup Fee */
+.setup-fee {
+    background: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-right: 3px solid #dc3545;
+}
+
+.setup-fee p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #721c24;
+    margin: 0;
+}
+
+.setup-fee span {
+    font-weight: 600;
+    color: #dc3545;
+    font-size: 12px;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+}
+
+.btn-primary {
+    background: #2c3e50;
+    color: white;
+    box-shadow: 0 2px 4px rgba(44, 62, 80, 0.2);
+}
+
+.btn-primary:hover {
+    background: #34495e;
+    box-shadow: 0 3px 6px rgba(44, 62, 80, 0.3);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    box-shadow: 0 3px 6px rgba(108, 117, 125, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .main-title {
+        font-size: 28px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-table {
+        font-size: 12px;
+    }
+    
+    .pricing-table th,
+    .pricing-table td {
+        padding: 8px 5px;
+    }
+    
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .pricing-table th,
+    .pricing-table td {
+        min-width: 100px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+        background-image: url('back.jpg') !important;
+        background-size: 210mm 297mm !important;
+        background-position: top left !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+    }
+    
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html, body {
+        background-image: url('back.jpg') !important;
+        background-size: 210mm 297mm !important;
+        background-position: top left !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        min-height: 297mm !important;
+        max-height: 297mm !important;
+        max-width: 210mm !important;
+        width: 210mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 11px;
+        line-height: 1.2;
+        color: #000;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateY(0);
+        overflow: visible;
+    }
+    
+    .container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        border: none;
+        background-color: transparent !important;
+        backdrop-filter: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding-top: 0;
+        margin-top: 0;
+        position: relative;
+        top: 60px;
+        left: 0;
+        transform: translateY(60px);
+    }
+    
+    .actions {
+        display: none !important;
+    }
+    
+    .btn {
+        display: none !important;
+    }
+    
+    .table-header {
+        display: none !important;
+    }
+    
+    .table-controls {
+        display: none !important;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px 0;
+        margin-bottom: 10px;
+    }
+    
+    .logo-section {
+        order: 0;
+    }
+    
+    .contact-info {
+        order: 1;
+        margin-left: auto;
+    }
+    
+    .logo-image {
+        width: 100px !important;
+        height: 100px !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        border: none !important;
+    }
+    
+    .company-name {
+        color: #000 !important;
+        font-size: 18px;
+    }
+    
+    .contact-info {
+        color: #000 !important;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .main-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #000;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+    .customer-info {
+        padding: 5px;
+        margin-bottom: 8px;
+        background: transparent !important;
+        border: 1px solid #000;
+        width: 70%;
+        margin: 0 auto 8px auto;
+    }
+    
+    .customer-info h2 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #000;
+        font-weight: 700;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .info-item {
+        gap: 1px;
+    }
+    
+    .info-item label {
+        font-size: 12px;
+        color: #000;
+        font-weight: 700;
+    }
+    
+    .info-item input {
+        padding: 4px 6px;
+        font-size: 12px;
+        border: none;
+        background: transparent !important;
+        font-weight: 600;
+        color: #000;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .pricing-section {
+        margin-bottom: 10px;
+    }
+    
+    .table-wrapper {
+        margin-bottom: 8px;
+        page-break-inside: avoid;
+        background: transparent !important;
+    }
+    
+    .pricing-table {
+        font-size: 8px;
+        border-collapse: collapse;
+        width: 70%;
+        margin: 0 auto;
+        background: transparent !important;
+    }
+    
+    .pricing-table th {
+        padding: 5px 2px;
+        font-size: 9px;
+        background: #22303d !important;
+        color: white !important;
+        border: 2px solid #000;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .pricing-table td {
+        padding: 3px;
+        font-size: 10px;
+        border: 1px solid #000;
+        background: transparent !important;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .pricing-table input {
+        width: 60px;
+        padding: 4px;
+        font-size: 12px;
+        border: none;
+        text-align: center;
+        background: transparent !important;
+        font-weight: 600;
+    }
+    
+    .total {
+        font-weight: bold;
+        color: #000 !important;
+        font-size: 12px;
+    }
+    
+    .subtotal {
+        background: transparent !important;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    
+    .discounted-total {
+        background: transparent !important;
+        font-weight: bold;
+        font-size: 12px;
+        color: #000 !important;
+    }
+    
+    .setup-fee {
+        padding: 6px;
+        margin-bottom: 10px;
+        background: #f8d7da !important;
+        border: 1px solid #000;
+        width: 70%;
+        margin: 0 auto 10px auto;
+    }
+    
+    .setup-fee p {
+        font-size: 12px;
+        color: #000;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    .setup-fee span {
+        font-weight: bold;
+        color: #000;
+        font-size: 12px;
+    }
+}
