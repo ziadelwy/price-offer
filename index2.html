@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -10,14 +11,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header class="header">
         </header>
 
-        <!-- Main Title -->
         <h1 class="main-title">Sales Calculator</h1>
 
-        <!-- Customer Information Section -->
         <div class="customer-info">
             <h2>معلومات العميل والخدمة</h2>
             <div class="info-grid">
@@ -44,7 +42,6 @@
             </div>
         </div>
 
-        <!-- Pricing Tables -->
         <div class="pricing-section">
             <div class="table-header">
                 <h2>جدول التكاليف</h2>
@@ -122,14 +119,12 @@
             </div>
         </div>
 
-        <!-- Setup Fee -->
         <div class="setup-fee">
             <p>مصاريف إنشاء الخدمة تدفع لمرة واحدة فقط بقيمة <span id="setupFee">500</span> ريال.</p>
             <p>سعر الدقيقة 30 هللة</p>
 
         </div>
 
-        <!-- Action Buttons -->
         <div class="actions">
             <button id="calculateBtn" class="btn btn-primary">حساب التكلفة</button>
             <button id="printBtn" class="btn btn-secondary">طباعة</button>
@@ -141,4 +136,128 @@
     <script src="script2.js"></script>
 </body>
 </html>
+-->
 
+
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الجمعة البيضاء الحصري</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .offer-card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 50px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            max-width: 90%;
+            border: 3px solid #ffd700;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin: 0 0 20px 0;
+            text-shadow: 0 0 20px rgba(255,215,0,0.8);
+            color: #ffd700;
+        }
+        
+        .price {
+            font-size: 70px;
+            font-weight: 900;
+            margin: 30px 0;
+            color: #fff;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+        }
+        
+        .old-price {
+            font-size: 40px;
+            text-decoration: line-through;
+            color: #ff6b6b;
+            margin: 0 20px;
+        }
+        
+        .offer-text {
+            font-size: 32px;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+        
+        .deadline {
+            background: #ffd700;
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 28px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: #ff0000;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            transform: rotate(15deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        
+        .container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="offer-card">
+            <div class="badge">عرض محدود!</div>
+            
+            <h1>عرض الجمعة البيضاء الحصري</h1>
+            
+            <div class="price">2000 ريال</div>
+            
+            <div class="offer-text">
+                <strong>تكلفة الخدمة للشهر الكامل</strong><br>
+                بدلاً من <span class="old-price">2500 ريال</span>
+            </div>
+            
+            <div class="offer-text">
+                العرض ساري حتى <strong>آخر شهر نوفمبر 2025</strong><br>
+                بمناسبة عروض الجمعة البيضاء 🎉
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
